@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Node.js ${{matrix.node-version}}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{matrix.node-version}}
+    - name: Installing Packages
+      uses: npm generate
+    - name: Deploy to github pages
+      run: |
+        git config --global user.email
+        git config --global user.name ${{secrets.GITHUB_USER_NAME}}
+        git remote set-url origin  https://${{secrets.GITHUB_PERSONAL_TOKEN}}@github.com/${{secrets.GITHUB_USER_NAME}}/portfolio.git
+        npm run generate
