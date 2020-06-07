@@ -20,26 +20,29 @@
         </nuxt-link>
       </li>
       <li>
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M7 18H17V16H7V18Z" fill="currentColor" />
-          <path d="M17 14H7V12H17V14Z" fill="currentColor" />
-          <path d="M7 10H11V8H7V10Z" fill="currentColor" />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z"
-            fill="currentColor"
-          />
-        </svg>
+        <nuxt-link to="/skills" class="inactive">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4 9C4 11.9611 5.60879 14.5465 8 15.9297V15.9999C8 18.2091 9.79086 19.9999 12 19.9999C14.2091 19.9999 16 18.2091 16 15.9999V15.9297C18.3912 14.5465 20 11.9611 20 9C20 4.58172 16.4183 1 12 1C7.58172 1 4 4.58172 4 9ZM16 13.4722C17.2275 12.3736 18 10.777 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9C6 10.777 6.7725 12.3736 8 13.4722L10 13.4713V16C10 17.1045 10.8954 17.9999 12 17.9999C13.1045 17.9999 14 17.1045 14 15.9999V13.4713L16 13.4722Z"
+              fill="currentColor"
+            />
+            <path
+              d="M10 21.0064V21C10.5883 21.3403 11.2714 21.5351 12 21.5351C12.7286 21.5351 13.4117 21.3403 14 21V21.0064C14 22.111 13.1046 23.0064 12 23.0064C10.8954 23.0064 10 22.111 10 21.0064Z"
+              fill="currentColor"
+            />
+          </svg>
+        </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/gallery">
+        <nuxt-link to="/gallery" class="inactive">
           <svg
             width="20"
             height="20"
@@ -77,6 +80,7 @@ ul {
   list-style-type: none;
 }
 .navcard {
+  background: white;
   left: 20%;
   position: absolute;
   border-top-left-radius: 30px;
@@ -92,33 +96,54 @@ ul {
 .navcard ul {
   margin: 0;
   padding: 0;
-  justify-content: space-around;
   height: 100%;
   position: relative;
   display: flex;
-  align-content: center;
-  cursor: pointer;
   flex-flow: column wrap;
 }
-.navcard svg {
+
+.navcard .inactive svg {
   color: #0005;
+  animation: glow 2s infinite linear both;
 }
-.navcard .active svg {
+@keyframes glow {
+  0% {
+    color: #0005;
+  }
+  50% {
+    color: #000;
+  }
+  100% {
+    color: #0005;
+  }
+}
+.navcard .active svg,
+.navcard .active i {
   color: #000;
 }
-.navcard ul li:hover svg {
+.navcard ul li:hover svg,
+.navcard ul li:hover i {
   color: #000c;
 }
+li {
+  flex: 1 0;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 768px) {
-  .navcard{
+  .navcard {
     bottom: 0;
     top: unset;
     width: 100%;
     height: 10vh;
     left: unset;
     box-shadow: none;
+    border-radius: unset;
+    border-top: 1px solid black;
   }
-  .navcard ul{
+  .navcard ul {
     flex-flow: row wrap;
   }
 }

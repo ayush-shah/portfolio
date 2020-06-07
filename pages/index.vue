@@ -21,6 +21,12 @@
           <h6>Click Here</h6>
         </a>
       </div>
+      <div class="data">
+        <h5>Linkedin</h5>
+        <a href="#">
+          <h6>Click Here</h6>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -72,6 +78,9 @@ export default Vue.extend({});
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #0001;
+}
+.data:last-child {
+  margin-bottom: 2.5%;
 }
 .data a {
   text-decoration: underline;

@@ -10,3 +10,16 @@ body {
 body {
   height: 100vh;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0000;
+}
+::-webkit-scrollbar-thumb {
+  background: #0001;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
