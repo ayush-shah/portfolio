@@ -1,25 +1,25 @@
-name: CI
-
+name: Build and Deploy
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [10.x]
     steps:
-    - uses: actions/checkout@v2
-    - name: Run Node.js ${{matrix.node-version}}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{matrix.node-version}}
-    - name: Installing Packages
-      uses: npm generate
-    - name: Deploy to github pages
-      run: |
-        git config --global user.email
-        git config --global user.name ${{secrets.GITHUB_USER_NAME}}
-        git remote set-url origin  https://${{secrets.GITHUB_PERSONAL_TOKEN}}@github.com/${{secrets.GITHUB_USER_NAME}}/portfolio.git
-        npm run generate
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false 
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run generate
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist

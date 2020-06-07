@@ -1,6 +1,8 @@
 <template>
   <div class="landing-page light">
-    <div class="avatar"></div>
+    <div class="avatar">
+      <img src="images/me.svg"/>
+    </div>
     <h1 class="name">Ayush Shah</h1>
     <div class="info">
       <div class="data">
@@ -56,17 +58,18 @@ export default Vue.extend({});
   padding: 5px;
 }
 
-.avatar {
+.avatar{
+  overflow:hidden;
   display: block;
   margin: 5% auto 2.5% auto;
-  background: url(/images/me.svg);
   width: 10vw;
-  background-size: cover;
   border: 1px solid;
   border-radius: 50%;
   height: 10vw;
 }
-
+.avatar img{
+  width:100%;
+}
 .info {
   display: flex;
   flex-flow: row wrap;

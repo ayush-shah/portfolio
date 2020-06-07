@@ -4,11 +4,11 @@
     <div class="item">
       <div class="items">
         <div class="caption">Let's Play Housie</div>
-        <img src="/images/Projects/housie.webp" alt="project1" />
+        <img src="images/Projects/housie.webp" alt="project1" />
       </div>
       <div class="items">
         <div class="caption">Deuex Solutions Pvt. Ltd.</div>
-        <img src="/images/Projects/deuex.webp" alt="project2" />
+        <img src="images/Projects/deuex.webp" alt="project2" />
       </div>
       <div class="items"></div>
     </div>

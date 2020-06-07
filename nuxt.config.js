@@ -18,8 +18,11 @@ export default {
       {
         href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap", rel: "stylesheet"
       },
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+      { rel: "icon", type: "image/x-icon", href: "favicon.ico" }
     ]
+  },
+   router: {
+    base: '/portfolio/'
   },
   /*
    ** Customize the progress-bar color

@@ -2,7 +2,7 @@
   <div>
     <div class="video" v-if="display">
       <video autoplay muted loop id="bgvideo" v-if="width > 768">
-        <source src="/background2.mp4" type="video/mp4" />Your browser does not support HTML5 video.
+        <source src="background2.mp4" type="video/mp4" />Your browser does not support HTML5 video.
       </video>
     </div>
     <div v-else></div>
