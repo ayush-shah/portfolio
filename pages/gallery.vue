@@ -38,5 +38,11 @@ export default {};
 }
 .items img {
   width: 100%;
+  filter: grayscale(1);
+  transition: filter 1s;
+  cursor: pointer;
+}
+.items img:hover {
+  filter: grayscale(0);
 }
 </style>

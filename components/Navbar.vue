@@ -81,7 +81,7 @@ ul {
 }
 .navcard {
   background: white;
-  left: 20%;
+  left: calc(20% + 1px);
   position: absolute;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -90,7 +90,6 @@ ul {
   height: 40%;
   align-content: center;
   z-index: 5;
-  box-shadow: -7px 0px 15px #0005;
 }
 
 .navcard ul {
@@ -139,7 +138,6 @@ li {
     width: 100%;
     height: 10vh;
     left: unset;
-    box-shadow: none;
     border-radius: unset;
     border-top: 1px solid black;
   }

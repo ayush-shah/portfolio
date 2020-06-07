@@ -1,9 +1,10 @@
 <template>
   <div class="landing-page light">
     <div class="avatar">
-      <img src="images/me.svg"/>
+      <img src="images/me.svg" />
     </div>
     <h1 class="name">Ayush Shah</h1>
+    <h4 class="job-def">Full Stack Web Developer</h4>
     <div class="info">
       <div class="data">
         <h5>Email</h5>
@@ -19,13 +20,13 @@
       </div>
       <div class="data">
         <h5>Github</h5>
-        <a href="#">
+        <a href="https://github.com/ayush-shah" target="_blank">
           <h6>Click Here</h6>
         </a>
       </div>
       <div class="data">
         <h5>Linkedin</h5>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/shahayushp/" target="_blank">
           <h6>Click Here</h6>
         </a>
       </div>
@@ -44,7 +45,7 @@ export default Vue.extend({});
   color: #fff;
 }
 .light {
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #000;
 }
 .dark.colormode i {
@@ -58,8 +59,8 @@ export default Vue.extend({});
   padding: 5px;
 }
 
-.avatar{
-  overflow:hidden;
+.avatar {
+  overflow: hidden;
   display: block;
   margin: 5% auto 2.5% auto;
   width: 10vw;
@@ -67,13 +68,13 @@ export default Vue.extend({});
   border-radius: 50%;
   height: 10vw;
 }
-.avatar img{
-  width:100%;
+.avatar img {
+  width: 100%;
 }
 .info {
   display: flex;
   flex-flow: row wrap;
-  margin: auto;
+  margin: 1.5% auto;
   width: 80%;
 }
 .data {
@@ -81,9 +82,6 @@ export default Vue.extend({});
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #0001;
-}
-.data:last-child {
-  margin-bottom: 2.5%;
 }
 .data a {
   text-decoration: underline;
@@ -98,6 +96,16 @@ export default Vue.extend({});
   .avatar {
     width: 15vh;
     height: 15vh;
+  }
+  h1,
+  h4 {
+    font-weight: 400;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h4 {
+    font-size: 1em;
   }
 }
 </style>
