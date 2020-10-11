@@ -16,19 +16,24 @@ export default {
     ],
     link: [
       {
-        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap", rel: "stylesheet"
+        href:
+          "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap",
+        rel: "stylesheet"
       },
       { rel: "icon", type: "image/x-icon", href: "favicon.ico" }
     ]
   },
-  
+
   /*
    ** Customize the progress-bar color
    */
   loading: {
-    color: '#000',
-    height: '10px',
+    color: "#000",
+    height: "10px",
     throttle: 100
+  },
+  router: {
+    base: "/portfolio/"
   },
   /*
    ** Global CSS
@@ -53,6 +58,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) { }
+    extend(config, ctx) {}
   }
 };
