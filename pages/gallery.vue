@@ -10,11 +10,7 @@
         <div class="caption">Deuex Solutions Pvt. Ltd.</div>
         <img src="images/Projects/deuex.webp" alt="project2" />
       </div>
-      <div class="items"></div>
     </div>
-    <div class="carousel01"></div>
-    <div class="carousel02"></div>
-    <div class="carousel03"></div>
   </div>
 </template>
 
@@ -26,23 +22,23 @@ export default {};
 .item {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
-  height: auto;
 }
+
 .items {
-  position: relative;
-  margin: 0 2.5%;
-  flex: 1 0 45%;
-  width: 49%;
-  align-self: center;
+  display: flex;
+  flex: 1 0 40%;
+  flex-flow: column wrap;
+  padding: 0 5%;
+  justify-content: space-between;
 }
+
 .items img {
   width: 100%;
-  filter: grayscale(1);
-  transition: filter 1s;
-  cursor: pointer;
+  margin: auto;
 }
-.items img:hover {
-  filter: grayscale(0);
+
+.caption {
+  display: flex;
+  align-self: center;
 }
 </style>

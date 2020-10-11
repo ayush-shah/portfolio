@@ -13,12 +13,6 @@
         </a>
       </div>
       <div class="data">
-        <h5>Number</h5>
-        <a href="tel:7977456315">
-          <h6>7977456315</h6>
-        </a>
-      </div>
-      <div class="data">
         <h5>Github</h5>
         <a href="https://github.com/ayush-shah" target="_blank">
           <h6>Click Here</h6>

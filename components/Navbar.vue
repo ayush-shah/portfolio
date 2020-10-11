@@ -2,7 +2,7 @@
   <div class="navcard">
     <ul>
       <li>
-        <nuxt-link to="/" class="active">
+        <nuxt-link to="/" class="active" title="About me">
           <svg
             width="20"
             height="20"
@@ -20,7 +20,7 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/skills" class="inactive">
+        <nuxt-link to="/skills" class="inactive" title="Skills">
           <svg
             width="20"
             height="20"
@@ -42,7 +42,7 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/gallery" class="inactive">
+        <nuxt-link to="/gallery" class="inactive" title="Gallery">
           <svg
             width="20"
             height="20"
@@ -65,13 +65,32 @@
           </svg>
         </nuxt-link>
       </li>
+      <li>
+        <nuxt-link to="/experience" class="inactive" title="Experience">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M14 11H10V13H14V11Z" fill="currentColor" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7 5V4C7 2.89545 7.89539 2 9 2H15C16.1046 2 17 2.89545 17 4V5H20C21.6569 5 23 6.34314 23 8V18C23 19.6569 21.6569 21 20 21H4C2.34314 21 1 19.6569 1 18V8C1 6.34314 2.34314 5 4 5H7ZM9 4H15V5H9V4ZM4 7C3.44775 7 3 7.44769 3 8V14H21V8C21 7.44769 20.5522 7 20 7H4ZM3 18V16H21V18C21 18.5523 20.5522 19 20 19H4C3.44775 19 3 18.5523 3 18Z"
+              fill="currentColor"
+            />
+          </svg>
+        </nuxt-link>
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Navbar"
+  name: "Navbar",
 };
 </script>
 
@@ -85,9 +104,9 @@ ul {
   position: absolute;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-  top: 30%;
+  top: 25%;
   width: 5%;
-  height: 40%;
+  height: 50%;
   align-content: center;
   z-index: 5;
 }
