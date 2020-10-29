@@ -14,7 +14,7 @@
       </div>
       <div class="exp-stem" data-stem="30">
         <div class="comp-title">Deuex Solutions Pvt. Ltd.</div>
-        <div class="comp-post">Frontend Developer</div>
+        <div class="comp-post">Intern</div>
         <div class="comp-duration">June 2019 - July 2019</div>
       </div>
     </div>
